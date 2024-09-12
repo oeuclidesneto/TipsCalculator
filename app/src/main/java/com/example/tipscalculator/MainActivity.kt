@@ -19,19 +19,37 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        var percentage: Int = 0
         binding.rbOptionOne.setOnCheckedChangeListener { _, isChecked ->
-            println("Euclides1 Option one:$isChecked" )
+            if(isChecked){
+                percentage = 10
+            }
         }
 
         binding.rbOptionTwo.setOnCheckedChangeListener { _, isChecked ->
-            println("Euclides1 Option two:$isChecked" )
+            if(isChecked){
+                percentage = 15
+            }
         }
 
         binding.rbOptionThree.setOnCheckedChangeListener { _, isChecked ->
-            println("Euclides1 Option three:$isChecked" )
+            if(isChecked) {
+                percentage = 20
+            }
         }
 
         binding.btnClear.setOnClickListener {
+
+        }
+
+        binding.btnCalculate.setOnClickListener {
+            val totalTable: Float = binding.tieTotal.text.toString().toFloat()
+            val nPeople: Int = binding.tieNumPeople.text.toString().toInt()
+
+            val totalTemp = totalTable / nPeople
+            val tips = totalTemp * percentage / 100
+            val totalWithTips = totalTemp + tips
+            println("Euclides1 " + totalWithTips)
 
         }
     }
