@@ -19,6 +19,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.rbOptionOne.setOnCheckedChangeListener { _, isChecked ->
+            println("Euclides1 Option one:$isChecked" )
+        }
+
+        binding.rbOptionTwo.setOnCheckedChangeListener { _, isChecked ->
+            println("Euclides1 Option two:$isChecked" )
+        }
+
+        binding.rbOptionThree.setOnCheckedChangeListener { _, isChecked ->
+            println("Euclides1 Option three:$isChecked" )
+        }
 
         binding.btnClear.setOnClickListener {
 
