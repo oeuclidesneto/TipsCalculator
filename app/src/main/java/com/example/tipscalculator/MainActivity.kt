@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tipscalculator.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,14 +42,27 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnCalculate.setOnClickListener {
-            val totalTable: Float = binding.tieTotal.text.toString().toFloat()
-            val nPeople: Int = binding.tieNumPeople.text.toString().toInt()
+            val totalTableTemp = binding.tieTotal.text
+            val nPeopleTemp = binding.tieNumPeople.text
 
-            val totalTemp = totalTable / nPeople
-            val tips = totalTemp * percentage / 100
-            val totalWithTips = totalTemp + tips
-            binding.tvResult.text = "Total with tips: " + totalWithTips
+            if (totalTableTemp?.isEmpty() == true ||
+                nPeopleTemp?.isEmpty() == true
+            ) {
+                Snackbar
+                    .make(binding.tieTotal, "Fill out all the fields", Snackbar.LENGTH_LONG)
+                    .show()
+            } else {
+                val totalTable: Float = binding.tieTotal.text.toString().toFloat()
+                val nPeople: Int = nPeopleTemp.toString().toInt()
 
+                val totalTemp = totalTable / nPeople
+                val tips = totalTemp * percentage / 100
+                val totalWithTips = totalTemp + tips
+                binding.tvResult.text = "Total with tips:   $totalWithTips"
+
+
+
+            }
         }
     }
 }
