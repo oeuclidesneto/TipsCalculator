@@ -60,8 +60,14 @@ class MainActivity : AppCompatActivity() {
                 val totalWithTips = totalTemp + tips
                 binding.tvResult.text = "Total with tips:   $totalWithTips"
 
-
-
+            }
+            binding.btnClear.setOnClickListener {
+                binding.tvResult.text = ""
+                binding.tieTotal.setText("")
+                binding.tieNumPeople.setText("")
+                binding.rbOptionOne.isChecked = false
+                binding.rbOptionTwo.isChecked = false
+                binding.rbOptionThree.isChecked = false
             }
         }
     }
