@@ -1,5 +1,6 @@
 package com.example.tipscalculator
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -92,6 +93,9 @@ class MainActivity : AppCompatActivity() {
                             binding.rbOptionOne.isChecked = false
                             binding.rbOptionTwo.isChecked = false
                             binding.rbOptionThree.isChecked = false
+
+                            val intent = Intent(this, SummaryActivity::class.java)
+                            startActivity(intent)
                         }
                     }
                 }
