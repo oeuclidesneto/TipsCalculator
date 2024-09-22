@@ -81,7 +81,6 @@ class MainActivity : AppCompatActivity() {
                         } else {
                             val totalTable: Float = totalTableTemp.toString().toFloat()
                             val nPeople: Int = numOfPeopleSelected
-
                             val totalTemp = totalTable / nPeople
                             val tips = totalTemp * percentage / 100
                             val totalWithTips = totalTemp + tips
