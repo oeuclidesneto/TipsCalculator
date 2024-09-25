@@ -43,74 +43,83 @@
         app:boxStrokeWidthFocused="0dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
-        app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_hint_total_table"
         app:layout_constraintTop_toBottomOf="@+id/tv_hint_total_table">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_total"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint=" e.g. $120.00"
+            android:hint="$ 120.00"
             android:inputType="numberDecimal"
             android:paddingStart="0dp"
-            android:textSize="25sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tv_num_of_ppl"
+        android:id="@+id/tv_hint_num_people"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Type number of people"
-        app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/til_total"
         app:layout_constraintTop_toBottomOf="@+id/til_total" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_num_of_ppl"
+        android:id="@+id/til_num_people"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
-        app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num_of_ppl">
+        app:layout_constraintStart_toStartOf="@+id/tv_hint_num_people"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_num_people">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_num_of_ppl"
+            android:id="@+id/tie_num_people"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint=" e.g. 4"
-            android:inputType="numberDecimal"
+            android:hint="4"
+            android:inputType="number"
             android:paddingStart="0dp"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/til_num_of_ppl_num_of_ppl" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/percentage"
+        android:id="@+id/tv_hint_percentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Tip Percentage"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:hintEnabled="false"
-        app:layout_constraintStart_toStartOf="@+id/til_num_of_ppl"
-        app:layout_constraintTop_toBottomOf="@+id/til_num_of_ppl" />
+        app:layout_constraintStart_toStartOf="@+id/til_num_people"
+        app:layout_constraintTop_toBottomOf="@+id/til_num_people" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_percentage"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="e.g. 10%"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:hintEnabled="false"
-        app:layout_constrainTop_toBottomOf="@+id/percentage">
+        app:layout_constrainTop_toBottomOf="@+id/tv_hint_percentage"
+        app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_hint_percentage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_percentage">
 
-
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_percentage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="$10"
+            android:inputType="number"
+            android:paddingStart="0dp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -132,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="206dp" />
+        app:layout_constraintGuide_begin="202dp" />
 
     <Button
         android:id="@+id/btn_calculate"
