@@ -83,6 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="4"
+            android:maxLength="2"
             android:inputType="number"
             android:paddingStart="0dp"
             android:textSize="24sp"
@@ -106,16 +107,16 @@
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:hintEnabled="false"
-        app:layout_constrainTop_toBottomOf="@+id/tv_hint_percentage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_percentage"
         app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
-        app:layout_constraintStart_toStartOf="@+id/tv_hint_percentage"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hint_percentage">
+        app:layout_constraintStart_toStartOf="@+id/tv_hint_percentage">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tie_percentage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="$10"
+            android:hint="10%"
+            android:maxLength="2"
             android:inputType="number"
             android:paddingStart="0dp"
             android:textSize="24sp"
