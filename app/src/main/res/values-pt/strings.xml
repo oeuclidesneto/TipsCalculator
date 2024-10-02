@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tips_calculator">Calculadora de Gorjeta</string>
+    <string name="fill_out_all_the_fields_below_to_calculate_your_bill">Preencha todos os campos para calcular a gorjeta</string>
+    <string name="type_the_bill_amount">Digite o valor da conta</string>
+    <string name="_120_00">R$ 120,00</string>
+    <string name="type_number_of_people">Digite o número de pessoas</string>
+    <string name="tip_percentage">Porcentagem da gorjeta</string>
+    <string name="clear">Limpar</string>
+    <string name="calculate">Calcular</string>
+    <string name="see_your_summary_below">Veja os detalhes da sua conta abaixo</string>
+    <string name="total_table">Valor da mesa:</string>
+    <string name="number_of_people">Número de pessoas:</string>
+    <string name="percentage">Porcentagem:</string>
+    <string name="recalculate">Recalcular</string>
+</resources>

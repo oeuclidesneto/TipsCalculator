@@ -1,5 +1,6 @@
 package com.example.tipscalculator
 
+import android.icu.text.DecimalFormat
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +24,7 @@ class SummaryActivity : AppCompatActivity() {
         val totalWithTips = intent.getFloatExtra("totalAmount", 0.0f)
 
         binding.tvPercentageTable.text = percentage.toString() + "%"
-        binding.tvTotalAmountTable.text = totalWithTips.toString()
+        binding.tvTotalAmountTable.text = DecimalFormat("#.00").format(totalWithTips)
         binding.tvTotalTable.text = totalTable.toString()
         binding.tvNumPeopleTable.text = numPeople.toString()
 
@@ -31,7 +32,6 @@ class SummaryActivity : AppCompatActivity() {
             finish()
         }
 
-        println("Euclides1 " + totalWithTips)
 
     }
 }
