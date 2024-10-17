@@ -127,6 +127,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_clear"
         style="@style/Widget.Material3.Button.OutlinedButton"
+        android:textColor="@color/blue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -142,10 +143,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="202dp" />
+        app:layout_constraintGuide_begin="220dp" />
 
     <Button
         android:id="@+id/btn_calculate"
+        android:backgroundTint="@color/blue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
