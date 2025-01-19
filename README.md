@@ -3,8 +3,9 @@ Tips Calculator
 An intuitive native Android app built with Kotlin that helps users quickly and accurately calculate tips for shared bills. Simply enter the total bill amount, the number of people, and the desired tip percentage to determine the total amount per person, including the tip. This app is designed to enhance your dining and sharing experience with a user-friendly interface.
 
 ## :camera_flash: Screenshots
-<img src="https://github.com/user-attachments/assets/f592466d-2aff-4cbb-88fe-30cbdba7cdad" width=200/>
 <img src="https://github.com/user-attachments/assets/0b076a37-db88-463e-aa74-189406653e36" width=200/>
+<img src="https://github.com/user-attachments/assets/f592466d-2aff-4cbb-88fe-30cbdba7cdad" width=200/>
+
 
 ## 🛠 Technologies Used
 
